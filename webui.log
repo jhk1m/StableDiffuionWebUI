@@ -1,0 +1,123 @@
+venv "D:\StableDiffusion\venv\Scripts\Python.exe"
+D:\StableDiffusion\venv\lib\site-packages\timm\models\layers\__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+*** Error loading script: train_tools.py
+    Traceback (most recent call last):
+      File "D:\StableDiffusion\modules\scripts.py", line 515, in load_scripts
+        script_module = script_loading.load_module(scriptfile.path)
+      File "D:\StableDiffusion\modules\script_loading.py", line 13, in load_module
+        module_spec.loader.exec_module(module)
+      File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+      File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+      File "D:\StableDiffusion\extensions\sd-webui-train-tools\scripts\train_tools.py", line 7, in <module>
+        from liasece_sd_webui_train_tools.ui import *
+      File "D:\StableDiffusion\extensions\sd-webui-train-tools\liasece_sd_webui_train_tools\ui.py", line 16, in <module>
+        from liasece_sd_webui_train_tools.train_ui import *
+      File "D:\StableDiffusion\extensions\sd-webui-train-tools\liasece_sd_webui_train_tools\train_ui.py", line 10, in <module>
+        from liasece_sd_webui_train_tools import train
+      File "D:\StableDiffusion\extensions\sd-webui-train-tools\liasece_sd_webui_train_tools\train.py", line 8, in <module>
+        from liasece_sd_webui_train_tools.ArgsList import ArgStore
+      File "D:\StableDiffusion\extensions\sd-webui-train-tools\liasece_sd_webui_train_tools\ArgsList.py", line 23, in <module>
+        import liasece_sd_webui_train_tools.sd_scripts.train_network as train_network
+      File "D:\StableDiffusion\extensions\sd-webui-train-tools\liasece_sd_webui_train_tools\sd_scripts\train_network.py", line 21, in <module>
+        from diffusers import DDPMScheduler
+      File "D:\StableDiffusion\venv\lib\site-packages\diffusers\__init__.py", line 5, in <module>
+        from .utils import (
+      File "D:\StableDiffusion\venv\lib\site-packages\diffusers\utils\__init__.py", line 37, in <module>
+        from .dynamic_modules_utils import get_class_from_dynamic_module
+      File "D:\StableDiffusion\venv\lib\site-packages\diffusers\utils\dynamic_modules_utils.py", line 28, in <module>
+        from huggingface_hub import cached_download, hf_hub_download, model_info
+    ImportError: cannot import name 'cached_download' from 'huggingface_hub' (D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\__init__.py)
+
+---
+Python 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+Version: v1.10.1
+Commit hash: 82a973c04367123ae98bd9abdf80d9eda9b910e2
+Installing requirements
+Installing sd-webui-train-tools requirement: D:\StableDiffusion\extensions\sd-webui-train-tools\requirements.txt
+Launching Web UI with arguments: 
+no module 'xformers'. Processing without...
+no module 'xformers'. Processing without...
+No module 'xformers'. Proceeding without it.
+Loading weights [d48c2391e0] from D:\StableDiffusion\models\Stable-diffusion\AAM_XL_Anime_Mix.safetensors
+D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+creating model quickly: OSError
+Traceback (most recent call last):
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "D:\StableDiffusion\venv\lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/None/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\StableDiffusion\venv\lib\site-packages\transformers\utils\hub.py", line 389, in cached_file
+    resolved_file = hf_hub_download(
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py", line 862, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py", line 969, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py", line 1484, in _raise_on_head_call_error
+    raise head_call_error
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py", line 1376, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py", line 1296, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py", line 277, in _request_wrapper
+    response = _request_wrapper(
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\file_download.py", line 301, in _request_wrapper
+    hf_raise_for_status(response)
+  File "D:\StableDiffusion\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 454, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-6730388c-480847be4dd2db1004bc975f;f343b472-3bd9-4fba-8bf6-49a425ec2e94)
+
+Repository Not Found for url: https://huggingface.co/None/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\StableDiffusion\Python\lib\threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+  File "D:\StableDiffusion\Python\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "D:\StableDiffusion\Python\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\StableDiffusion\modules\initialize.py", line 149, in load_model
+    shared.sd_model  # noqa: B018
+  File "D:\StableDiffusion\modules\shared_items.py", line 175, in sd_model
+    return modules.sd_models.model_data.get_sd_model()
+  File "D:\StableDiffusion\modules\sd_models.py", line 693, in get_sd_model
+    load_model()
+  File "D:\StableDiffusion\modules\sd_models.py", line 820, in load_model
+    sd_model = instantiate_from_config(sd_config.model, state_dict)
+  File "D:\StableDiffusion\modules\sd_models.py", line 775, in instantiate_from_config
+    return constructor(**params)
+  File "D:\StableDiffusion\repositories\generative-models\sgm\models\diffusion.py", line 61, in __init__
+    self.conditioner = instantiate_from_config(
+  File "D:\StableDiffusion\repositories\generative-models\sgm\util.py", line 175, in instantiate_from_config
+    return get_obj_from_str(config["target"])(**config.get("params", dict()))
+  File "D:\StableDiffusion\repositories\generative-models\sgm\modules\encoders\modules.py", line 88, in __init__
+    embedder = instantiate_from_config(embconfig)
+  File "D:\StableDiffusion\repositories\generative-models\sgm\util.py", line 175, in instantiate_from_config
+    return get_obj_from_str(config["target"])(**config.get("params", dict()))
+  File "D:\StableDiffusion\repositories\generative-models\sgm\modules\encoders\modules.py", line 361, in __init__
+    self.transformer = CLIPTextModel.from_pretrained(version)
+  File "D:\StableDiffusion\modules\sd_disable_initialization.py", line 68, in CLIPTextModel_from_pretrained
+    res = self.CLIPTextModel_from_pretrained(None, *model_args, config=pretrained_model_name_or_path, state_dict={}, **kwargs)
+  File "D:\StableDiffusion\venv\lib\site-packages\transformers\modeling_utils.py", line 2789, in from_pretrained
+    resolved_config_file = cached_file(
+  File "D:\StableDiffusion\venv\lib\site-packages\transformers\utils\hub.py", line 410, in cached_file
+    raise EnvironmentError(
+OSError: None is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+
+Failed to create model quickly; will retry using slow method.
+Terminate batch job (Y/N)? 
